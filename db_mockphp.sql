@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.5.8, for Win32 (x86)
 --
--- Host: localhost    Database: mockproject
+-- Host: localhost    Database: mockphp
 -- ------------------------------------------------------
 -- Server version	5.5.8
 
@@ -291,8 +291,9 @@ CREATE TABLE `tbl_user` (
   `usr_address` text NOT NULL,
   `usr_phone` varchar(15) NOT NULL,
   `usr_level` char(1) NOT NULL DEFAULT '1',
+  `usr_gender` tinyint(1) NOT NULL,
   PRIMARY KEY (`usr_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -301,6 +302,7 @@ CREATE TABLE `tbl_user` (
 
 LOCK TABLES `tbl_user` WRITE;
 /*!40000 ALTER TABLE `tbl_user` DISABLE KEYS */;
+INSERT INTO `tbl_user` VALUES (1,'HoangHH','123456','hoanghh@smartosc.com','Cau Giay','0949393498','1',1);
 /*!40000 ALTER TABLE `tbl_user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -313,4 +315,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-07-16 23:20:23
+-- Dump completed on 2014-07-17 11:11:13
